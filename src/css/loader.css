@@ -1,23 +1,30 @@
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #fff;
-    border-bottom-color: #ff3d00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  color: #f60404;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
 }
-  
+
+@keyframes animloader {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
+  }
+}
+
 .loader.is-hidden {
-    display: none;
-}
-  
-@keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  display: none;
 }

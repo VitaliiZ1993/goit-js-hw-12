@@ -6,6 +6,8 @@ import {
   addLoader,
   hideLoading,
 } from './js/render-functions.js';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -38,7 +40,7 @@ async function onSearch(event) {
 
   currentPage = 1;
   clearGallery();
-  toggleLoadMoreButton(false);  // Скрыть кнопку при новом запросе
+  toggleLoadMoreButton(false);
   addLoader();
   await fetchAndRenderImages();
 }
@@ -82,7 +84,7 @@ async function fetchAndRenderImages() {
         titleColor: 'white',
       });
     } else {
-      toggleLoadMoreButton(true); // Показать кнопку "Load more"
+      toggleLoadMoreButton(true);
     }
   } catch (error) {
     console.error(`Error fetching images:`, error);

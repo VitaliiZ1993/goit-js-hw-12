@@ -1,59 +1,49 @@
-form {
+.search-form {
     margin: 0 auto 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 8px;
-}
+  }
   
-button {
+  input {
+    width: 272px;
+    max-height: 40px;
+    border: 1px solid #808080;
+    padding: 8px;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+  }
+  
+  input:hover {
+    border-color: #000000;
+  }
+  
+  input:focus {
+    border-color: #218838;
+  }
+  
+  .btn-form {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
-    background-color: #4e75ff;
+    background-color: #28a745;
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
     width: 91px;
     height: 40px;
-    caret-color: transparent;
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   
-button:hover {
-    background-color: #6c8cff;
-}
-  
-input {
-    border: 1px solid #808080;
-    border-radius: 4px;
-    width: 272px;
-    padding: 8px 16px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.04em;
-    color: #808080;
-    caret-color: transparent;
-}
-  
-input:hover {
-    border-color: #000;
-}
-  
-input:focus {
-    outline: none;
-    border-color: #4e75ff;
-}
-  
-input:focus::placeholder {
-    color: #4e75ff;
-}
-  
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 360px);
-    gap: 24px;
-}
+  button:hover,
+  button:focus {
+    background-color: #218838;
+  }
