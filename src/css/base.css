@@ -14,24 +14,30 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-  }
+}
   
-  body {
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
-  }
+}
   
-  main {
+main {
     flex-grow: 1;
-  }
-  main:has(.back-link) {
+}
+
+main:has(.back-link) {
     text-align: center;
-  }
+}
   
-  .btn-back {
+.btn-back {
     margin-bottom: 10px;
-  }
+}
+  
+.btn-load-more {
+    display: none;
+}
+
